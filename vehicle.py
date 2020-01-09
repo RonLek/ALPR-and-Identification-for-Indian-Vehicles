@@ -22,22 +22,10 @@ app_url = 'https://vahan.nic.in/nrservices/faces/user/searchstatus.xhtml'
 captcha_image_url = 'https://vahan.nic.in/nrservices/cap_img.jsp'
 number = sys.argv[1]
 
-#MARK: Get Request to get webpage elements like textFields, image, etc
-r = requests.get(url=app_url)
-cookies = r.cookies
-soup = BeautifulSoup(r.text, 'html.parser')
+driver = webdriver.Chrome("C:\\Users\\hp\\Chrome WebDriver\\chromedriver.exe")
+driver.get('https://vahan.nic.in/nrservices/faces/user/searchstatus.xhtml');
 
-#MARK: ViewState contains token which needs to be passed in POST Request
-# ViewState is a hidden element. Open debugger to inspect element 
-viewstate = soup.select('input[name="javax.faces.ViewState"]')[0]['value']
-
-#MARK: Get Request to get Captcha Image from URL
-## Captcha Image Changes each time the URL is fired
-iresponse = requests.get(captcha_image_url)
-img = Image.open(BytesIO(iresponse.content))
-img.save("downloadedpng.png")
-
-def resolve(img):
+def resolve():
 	enhancedImage = enhance()
 	return pytesseract.image_to_string(enhancedImage)
 
@@ -50,15 +38,54 @@ def enhance():
 	final = cv2.GaussianBlur(erosion_again, (1, 1), 0)
 	return final
 
+# sleep(5)
+
+#TODO: Add functionality to repeat detection in case of incorrect OCR
+#while(driver.find_element_by_id('rcDetailsPanel') == None):
+captcha_image = driver.find_elements_by_class_name("captcha-image")[0]
+driver.save_screenshot('screenshot.png')
+location = captcha_image.location
+size = captcha_image.size
+
+image = Image.open('screenshot.png')
+left = location['x']
+top = location['y'] 
+right = location['x'] + size['width']
+bottom = location['y'] + size['height'] 
+image = image.crop((left, top, right, bottom))  # defines crop points
+image.save('downloadedpng.png', 'png')  # saves new cropped image
 
 print('Resolving Captcha')
-captcha_text = resolve(img)
+captcha_text = resolve()
 extracted_text = captcha_text.replace(" ", "").replace("\n", "")
 print("OCR Result => ", extracted_text)
 print(extracted_text)
 
-driver = webdriver.Chrome()
-driver.get('https://vahan.nic.in/nrservices/faces/user/searchstatus.xhtml');
+vehicle_number = driver.find_element_by_id('regn_no1_exact')
+captcha_input = driver.find_element_by_id('txt_ALPHA_NUMERIC')
+button = driver.find_element_by_id('j_idt47')
+vehicle_number.send_keys(number)
+captcha_input.send_keys(extracted_text)
+button.click()
+
+# with open('downloadedpng.png', 'wb') as file:
+#     file.write(captcha_image.screenshot_as_png)
+
+# #MARK: Get Request to get webpage elements like textFields, image, etc
+# r = requests.get(url=app_url)
+# cookies = r.cookies
+# soup = BeautifulSoup(r.text, 'html.parser')
+
+# #MARK: ViewState contains token which needs to be passed in POST Request
+# # ViewState is a hidden element. Open debugger to inspect element 
+# viewstate = soup.select('input[name="javax.faces.ViewState"]')[0]['value']
+
+#MARK: Get Request to get Captcha Image from URL
+## Captcha Image Changes each time the URL is fired
+# iresponse = requests.get(captcha_image_url)
+# img = Image.open(BytesIO(iresponse.content))
+# img.save("downloadedpng.png")
+
 
 # # MARK: Identifying Submit Button which will be responsible to make POST Request
 # button = soup.find("button",{"type": "submit"})
