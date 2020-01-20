@@ -1,6 +1,8 @@
 ## Problem Statement: Web Application for Number Plate Detection in Residential Complexes (PS Code: CB31)
 ## Team Name: InIt_to_winIT
 
+![result_gif](/results/result_gif.gif)
+
 ### Introduction
 Automatic number-plate recognition (ANPR; see also other names below) is a technology that uses optical character recognition on images to read vehicle registration plates to create vehicle location data.
 
@@ -11,18 +13,17 @@ The model is built taking into consideration the highest accuracy achievable wit
 ### Training
 `training_yolo.ipynb` is the Jupyter notebook which contains the code used to train the model. It can be run on [Google Colab](https://colab.research.google.com/) or locally using Anaconda(https://www.anaconda.com/).
 
-If you don't wish to train the model from the beginning and are looking for a pretrained model (Insert Model Name) is the model trained by us on a variety of images. 
+If you don't wish to train the model from the beginning and are looking for a pretrained model (**Insert Model Name**) is the model trained by us on a variety of images. 
 
 ### Dataset
 The model has been trained on more than 2000 images. About 1000 images were taken for the dataset from the paper - and more than 1000 images were scraped from Google and some images were manually captured for odd and more difficult cases.
 
 ### Testing
-(Write)
+(**To be written**)
 
 ### Results
 Following are some results of our model:
 
-![result1](results/result1)
-![result2](results/result2)
-![result3](results/result3)
-![result4](results/result4)
+![](/results/result1.jpg)
+![](/results/result2.jpg)
+![](/results/result3.jpg)
