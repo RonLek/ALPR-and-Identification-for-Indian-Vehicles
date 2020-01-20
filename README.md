@@ -1,7 +1,9 @@
-## Problem Statement: Web Application for Number Plate Detection in Residential Complexes (PS Code: CB31)
-## Team Name: InIt_to_winIT
+## Web Application for Number Plate Detection in Residential Complexes (PS Code: CB31)
+### Team Name: InIt_to_winIT
 
-![result_gif](/results/result_gif.gif)
+<p align="center">
+  <img  src="/results/result_gif.gif">
+</p>
 
 ### Introduction
 Automatic number-plate recognition (ANPR; see also other names below) is a technology that uses optical character recognition on images to read vehicle registration plates to create vehicle location data.
