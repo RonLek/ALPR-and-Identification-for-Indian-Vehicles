@@ -3,7 +3,7 @@ import cv2
 import os 
 
 # Read the video from specified path 
-cam = cv2.VideoCapture("./test2.mp4") 
+cam = cv2.VideoCapture("./video.mp4") 
 
 try: 
 	
@@ -24,7 +24,7 @@ while(True):
 	ret,frame = cam.read() 
 
 	if ret: 
-		if i%50==0:
+		if i%20==0:
 			# if video is still left continue creating images 
 			name = './data/frame' + str(currentframe) + '.jpg'
 			print ('Creating...' + name) 

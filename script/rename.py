@@ -1,5 +1,5 @@
 import os
-path = 'images/'
+path = 'final/'
 files = os.listdir(path)
 
 
