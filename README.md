@@ -11,7 +11,7 @@ In this repository we build a web application to automatically detect and identi
 The model is built taking into consideration the highest accuracy achievable without compromising on speed. It has been trained on more than 2000 images annotated manually.
 
 ### Training
-`training_yolo.ipynb` is the Jupyter notebook which contains the code used to train the model. It can be run on [Google Colab](https://colab.research.google.com/) or locally using Anaconda(https://www.anaconda.com/).
+`training_yolo.ipynb` is the Jupyter notebook which contains the code used to train the model. It can be run on [Google Colab](https://colab.research.google.com/) or locally using [Anaconda](https://www.anaconda.com/).
 
 If you don't wish to train the model from the beginning and are looking for a pretrained model (**Insert Model Name**) is the model trained by us on a variety of images. 
 
