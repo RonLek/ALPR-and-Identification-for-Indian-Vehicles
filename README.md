@@ -24,7 +24,14 @@ The model has been trained on more than 2000 images. About 1000 images were take
 (**To be written**)
 
 ### Results
-Following are some results of our model:
+
+A insight of the results obtained on the dataset provided by MixORG:
+
+<p align="center">
+  <img  src="/results/result_dataset_gif.gif">
+</p>
+
+**Additional results of our model**:
 
 ![](/results/result1.jpg)
 ![](/results/result2.jpg)
