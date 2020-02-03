@@ -13,13 +13,16 @@ def detect_text(path):
     texts = response.text_annotations
     print('Texts:')
 
-    for text in texts:
-        print('\n"{}"'.format(text.description))
+    with open('results.txt', 'w', encoding='utf8') as f:
+        result=""
+        for text in texts:
+            result+='\n"{}"'.format(text.description)
 
-        vertices = (['({},{})'.format(vertex.x, vertex.y)
-                    for vertex in text.bounding_poly.vertices])
+            vertices = (['({},{})'.format(vertex.x, vertex.y)
+                        for vertex in text.bounding_poly.vertices])
 
-        print('bounds: {}'.format(','.join(vertices)))
+            result+='bounds: {}'.format(','.join(vertices))
+        f.write(result)
 
     if response.error.message:
         raise Exception(
@@ -27,4 +30,4 @@ def detect_text(path):
             'https://cloud.google.com/apis/design/errors'.format(
                 response.error.message))
 
-detect_text('numberplate.jpg')
+detect_text('numberplatehindi.jpg')
