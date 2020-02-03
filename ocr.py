@@ -1,3 +1,8 @@
+def preprocess(plate):
+    plate.strip('IND')
+    plate.strip('\n')
+    print(plate)
+    
 def detect_text(path):
     """Detects text in the file."""
     from google.cloud import vision
@@ -16,12 +21,14 @@ def detect_text(path):
     with open('results.txt', 'w', encoding='utf8') as f:
         result=""
         for text in texts:
-            result+='\n"{}"'.format(text.description)
+            result+=text.description
+         #   result+='\n"{}"'.format(text.description)
 
-            vertices = (['({},{})'.format(vertex.x, vertex.y)
-                        for vertex in text.bounding_poly.vertices])
+            #vertices = (['({},{})'.format(vertex.x, vertex.y)
+             #           for vertex in text.bounding_poly.vertices])
 
-            result+='bounds: {}'.format(','.join(vertices))
+            #result+='bounds: {}'.format(','.join(vertices))
+        preprocess(result)
         f.write(result)
 
     if response.error.message:
@@ -30,4 +37,4 @@ def detect_text(path):
             'https://cloud.google.com/apis/design/errors'.format(
                 response.error.message))
 
-detect_text('numberplatehindi.jpg')
+detect_text('numberplate.jpg')
