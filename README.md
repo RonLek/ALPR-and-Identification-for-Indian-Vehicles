@@ -23,7 +23,7 @@ The model has been trained on more than 2000 images. About 1000 images were take
 ### Testing
 (**To be written**)
 
-### Results
+### Detection Results
 
 A insight of the results obtained on the dataset provided by MixORG:
 
@@ -36,3 +36,19 @@ A insight of the results obtained on the dataset provided by MixORG:
 ![](/results/result1.jpg)
 ![](/results/result2.jpg)
 ![](/results/result3.jpg)
+
+### Image Preprocessing
+
+Once the number plates have been successfully detected, they are cropped from the image using their bounding box coordinates and saved in a directory. Image processing operations are applied to convert the image to gray scale, sharpen it and enhance it.
+
+![Cropped Plate](/results/croppedplate.jpg)
+![Enhanced Plate](/results/enhancedplate.jpg)
+
+### Optical Character Recognition
+Once this has been achieved `ocr.py` uses Google Cloud Vision API to detect text in the image. **Our method can detect text in more than 50 different languages as shown below**
+
+![OCR Hindi Result](/results/ocrhindiresult.jpg)
+
+The final result is the trimmed number plate which will be stored in the MongoDB database.
+
+![OCR Final](/results/ocrfinal.png)
