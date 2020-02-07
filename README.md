@@ -19,6 +19,8 @@ The model is built taking into consideration the highest accuracy achievable wit
 **Email id: sih2020rm@gmail.com
 Password: SIH@2020**
 
+**Drive Link (Access from the above account) - https://drive.google.com/drive/folders/1UecsNugTSAKIswP8PdBq2vzHWoQYZfUj**
+
 ## Part 1 - Detection
 
 ### Training
