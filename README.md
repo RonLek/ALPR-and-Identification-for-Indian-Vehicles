@@ -29,7 +29,7 @@ Password: SIH@2020**
 If you don't wish to train the model from the beginning and are looking for a pretrained model `yolo-obj_best.weights` (Stored in Google Drive/project_sih/darknet/build/darknet/x64/backup) contains pretrained weights to initialize the model and test directly. 
 
 ### Dataset
-The model has been trained on more than 2500 images. About 1000 images were taken for the dataset from the paper - (**Insert Paper Name**) and a lot of images were manually clicked for odd and more difficult cases. We also scraped images from Google, meticulously selecting unique and difficult-to-detect images to make the model more robust to different kinds of vehicles and scenarios.
+The model has been trained on more than 2500 images. About 1000 images were taken for the dataset from the paper - [A Robust Real-Time Automatic License Plate Recognition Based on the YOLO Detector by Laroca *et.al.*](https://ieeexplore.ieee.org/document/8489629) and a lot of images were manually clicked for odd and more difficult cases. We also scraped images from Google, meticulously selecting unique and difficult-to-detect images to make the model more robust to different kinds of vehicles and scenarios.
 
 ### Testing
 The `yolo-obj_best.weights` is the weights file which `test_sih.ipynb` uses to test our model against images and videos. The following parts show how to test on images and videos.
@@ -110,7 +110,7 @@ python vehicle.py Number_plate_without_spaces
 We plan to monetize this application by providing premium features to the users (residents of a society). 
 
 The premium features include the following:
-* We've all been through the problem when the trash collecting van arrives and we miss it, or when the milkman arrives but you're not prepared with how much milk you need for that day, or when you're expecting a courier and are not home and don't know when the postman would arrive so that you could call your neighbor. We provide a solution to these problems for the premium subscribers to recieve a notification everytime when daily utility services like postman, milman or trash-collecting van arrives by storing the numbers of their vehicles in our database after detection.
+* We've all been through the problem when the trash collecting van arrives and we miss it, or when the milkman arrives but you're not prepared with how much milk you need for that day, or when you're expecting a courier and are not home and don't know when the postman would arrive so that you could call your neighbor. We provide a solution to these problems for the premium subscribers to recieve a notification everytime when daily utility services like postman, milkman or trash-collecting van arrives by storing the numbers of their vehicles in our database after detection.
 
 * Ever caught by the traffic police and found the your insurance and PUC have expired? With our app, we provide the solution to this problem! Every time your PUC or Insurance expires, a SMS/Email is sent to the resident to renew it. No need to get scared of the cop anymore (Don't drink and drive though, the application doesn't help in that case.)
 
