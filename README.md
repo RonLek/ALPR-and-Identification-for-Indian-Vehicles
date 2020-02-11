@@ -101,7 +101,9 @@ The final result is the trimmed number plate which will be stored in the MongoDB
 ![OCR Final](/results/ocrfinal.png)
 
 ## Part 3 - Web Application (Finals)
-The number plate detected by the model and recognized by the OCR engine is now stored in the MongoDB database. The appication built would have a Node.js backend and would be deployed using Docker. The `vehicle.py` script located in `scripts/vehicle.py` smartly (it bypasses the captcha on the website ;) ) fetches all the vehicle details such as Vehicle Owner Name, vehicle color, chassis number, PUC, Insurance and other details. Make sure you have the dependencies installed and have changed the paths to the Teserract file and the webdriver appropriately. Execute the script as follows replacing the "Number_plate_without_spaces" with the entire number plate:
+The number plate detected by the model and recognized by the OCR engine is now stored in the MongoDB database. The appication built would have a Node.js backend and would be deployed using Docker. The `vehicle.py` script located in `scripts/vehicle.py` smartly (it bypasses the captcha on the website ;) ) fetches all the vehicle details such as Vehicle Owner Name, vehicle color, chassis number, PUC, Insurance and other details. 
+
+Make sure you have the dependencies installed and have changed the paths to the webdriver appropriately. Execute the script as follows replacing the "Number_plate_without_spaces" with the entire number plate:
 
 ```
 python vehicle.py Number_plate_without_spaces
