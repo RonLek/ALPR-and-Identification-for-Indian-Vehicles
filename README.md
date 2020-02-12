@@ -5,6 +5,12 @@
   <img  src="/results/result_gif.gif">
 </p>
 
+### Video Tutorials for Running the Code
+
+**Part 1 - https://drive.google.com/open?id=1n5qZgEIDQEoyE0VV5S0fuPEHKPWz4Mol**
+
+**Part 2 - https://drive.google.com/open?id=1z2_BK1dVoNp1NRTqmirddaLScGjDdaOc**
+
 ### Introduction
 Automatic number-plate recognition (ANPR; see also other names below) is a technology that uses optical character recognition on images to read vehicle registration plates to create vehicle location data.
 
@@ -20,12 +26,6 @@ The model is built taking into consideration the highest accuracy achievable wit
 Password: SIH@2020**
 
 **Drive Link (Access from the above account) - https://drive.google.com/drive/folders/1UecsNugTSAKIswP8PdBq2vzHWoQYZfUj**
-
-### Video Tutorials for Running the Code
-
-**Part 1 - https://drive.google.com/open?id=1n5qZgEIDQEoyE0VV5S0fuPEHKPWz4Mol**
-
-**Part 2 - https://drive.google.com/open?id=1z2_BK1dVoNp1NRTqmirddaLScGjDdaOc**
 
 ## Part 1 - Detection
 
