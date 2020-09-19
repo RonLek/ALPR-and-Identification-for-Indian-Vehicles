@@ -1,5 +1,4 @@
-# Web Application for Number Plate Detection in Residential Complexes (PS Code: CB31)
-### Team Name: InIt_to_winIT
+# Automatic License Plate Detection and Identification for Indian Vehicles
 
 <p align="center">
   <img  src="/results/result_gif.gif">
@@ -20,12 +19,9 @@ The model is built taking into consideration the highest accuracy achievable wit
 
 **Important**
 
-**Since the weight files are too big to bypass the GitHub upload limit (100 MB) we have decided to place the Detection model on Google Drive. Kindly log in to Google with the following credentials to run the `training_sih.ipynb` and `test_sih.ipynb` files. (Make sure no other Google account is signed in to let Colab have unrestricted access to the Drive.)**
+**Since the weight files are too big to bypass the GitHub upload limit (100 MB) we have decided to place the Detection model on Google Drive. Run the `training_sih.ipynb` and `test_sih.ipynb` files for training and testing the model respectively**
 
-**Email id: sih2020rm@gmail.com
-Password: SIH@2020**
-
-**Drive Link (Access from the above account) - https://drive.google.com/drive/folders/1UecsNugTSAKIswP8PdBq2vzHWoQYZfUj**
+Link to Jupyter Notebooks - https://drive.google.com/drive/folders/1JCh9v5bzPIMDWtKUpAaCH3i2glOkW8iu?usp=sharing
 
 ## Part 1 - Detection
 
@@ -106,7 +102,7 @@ The final result is the trimmed number plate which will be stored in the MongoDB
 
 ![OCR Final](/results/ocrfinal.png)
 
-## Part 3 - Web Application (Finals)
+## Part 3 - Web Application (TBI)
 The number plate detected by the model and recognized by the OCR engine is now stored in the MongoDB database. The appication built would have a Node.js backend and would be deployed using Docker. The `vehicle.py` script located in `scripts/vehicle.py` smartly (it bypasses the captcha on the website ;) ) fetches all the vehicle details such as Vehicle Owner Name, vehicle color, chassis number, PUC, Insurance and other details. 
 
 Make sure you have the dependencies installed and have changed the paths to the webdriver appropriately. Execute the script as follows replacing the "Number_plate_without_spaces" with the entire number plate:
