@@ -17,11 +17,15 @@ In this repository we build a web application to automatically detect and identi
 
 The model is built taking into consideration the highest accuracy achievable without compromising on speed. It has been trained on more than 2000 images annotated manually.
 
-**Important**
+#### Important
 
 **Since the weight files are too big to bypass the GitHub upload limit (100 MB) we have decided to place the Detection model on Google Drive. Run the `training_sih.ipynb` and `test_sih.ipynb` files for training and testing the model respectively**
 
 Link to Jupyter Notebooks - https://drive.google.com/drive/folders/1JCh9v5bzPIMDWtKUpAaCH3i2glOkW8iu?usp=sharing
+
+#### darknet folder
+
+The video shows you need credentials to the Google Drive to access a folder named `darknet`. This folder is just the darknet folder [here](https://github.com/AlexeyAB/darknet). Clone the contents of this repository into your Drive and you should be good to go. Follow everything else as mentioned in the video. In case of errors refer ipynb cell logs or raise an issue within this GitHub repository.
 
 ## Part 1 - Detection
 
