@@ -41,7 +41,7 @@ The model has been trained on more than 2500 images. About 1000 images were take
 The `yolo-obj_best.weights` is the weights file which `test_sih.ipynb` uses to test our model against images and videos. The following parts show how to test on images and videos.
 
 **Testing on Images**
-* Upload your image to `project_sih/darknet/test_videos_images` in the Google Drive (make sure you're adding it to the Drive associated with the account sih2020rm@gmail.com).
+* Upload your image to `project_sih/darknet/test_videos_images` in the Google Drive.
 * Change `image3.jpg` to the name of your image file in the in the following section in the "Test on Image" section.
 
 ```python
