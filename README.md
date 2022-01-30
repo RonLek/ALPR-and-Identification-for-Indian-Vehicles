@@ -32,7 +32,7 @@ The video shows you need credentials to the Google Drive to access a folder name
 ### Training
 `training_sih.ipynb` is the Jupyter notebook which contains the code used to train the model. It can be run on [Google Colab](https://colab.research.google.com/) or locally using [Anaconda](https://www.anaconda.com/). (When running using Anaconda make sure you have the `project_sih` folder from the Google Drive placed correctly in the path.)
 
-If you don't wish to train the model from the beginning and are looking for a pretrained model `yolo-obj_best.weights` (Stored in Google Drive/project_sih/darknet/build/darknet/x64/backup) contains pretrained weights to initialize the model and test directly. 
+If you don't wish to train the model from the beginning and are looking for a pretrained model `yolo-obj_best.weights` (Stored in Google Drive/project_sih/darknet/build/darknet/x64/backup - [Direct Link](https://drive.google.com/drive/folders/196iZncscUUrerpD4-FmQ9ManoxxRX103?usp=sharing)) contains pretrained weights to initialize the model and test directly. 
 
 ### Dataset
 The model has been trained on more than 2500 images. About 1000 images were taken for the dataset from the paper - [A Robust Real-Time Automatic License Plate Recognition Based on the YOLO Detector by Laroca *et.al.*](https://ieeexplore.ieee.org/document/8489629) and a lot of images were manually clicked for odd and more difficult cases. We also scraped images from Google, meticulously selecting unique and difficult-to-detect images to make the model more robust to different kinds of vehicles and scenarios.
